@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROFILE - 17yo High Schooler</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    
+    <div id="profile-screen">
+      <div class="header">
+        <div class="profile-img-wrapper">
+          <img src="image/my-photo.jpeg/昆布.jpeg" alt="自分の顔写真">
+        </div>
+        <span class="badge">17 y/o</span>
+        <h1>高校生男子</h1>
+        <p class="location">📍 神奈川県 小田原市</p>
+      </div>
+
+      <div class="intro-box">
+        <p class="intro-text">
+          小田原に住んでいるらしい
+        </p>
+      </div>
+
+      <p class="section-title">私の好きなもの３つ</p>
+
+      <div class="favorites-list">
+        
+        <div class="fav-item">
+          <div class="img-wrapper">
+            <img src="image/ramen.jpeg/ラーメええええん.jpeg" alt="ラーメン">
+          </div>
+          <div class="fav-info">
+            <h3>ラーメン 🍜</h3>
+            <p>ラーメン食べたい</p>
+          </div>
+        </div>
+
+        <div class="fav-item">
+          <div class="img-wrapper">
+            <img src="image/cat.jpeg/猫おおおおおお.jpeg" alt="猫">
+          </div>
+          <div class="fav-info">
+            <h3>猫 🐱</h3>
+            <p>猫になりたい</p>
+          </div>
+        </div>
+
+        <div class="fav-item">
+          <div class="img-wrapper">
+            <img src="splatoon.jpeg/スプラ.jpeg" alt="スプラトゥーン">
+          </div>
+          <div class="fav-info">
+            <h3>スプラトゥーン 🎮</h3>
+            <p>ランク上げたい</p>
+          </div>
+        </div>
+
+      </div>
+
+      <button id="action-btn" class="btn">このボタンを押す</button>
+    </div>
+
+    <!-- ボタンを押した後に表示される完了画面 -->
+    <div id="thanks-screen" style="display: none; text-align: center; padding: 40px 10px;">
+      <h2 style="font-size: 20px; color: var(--accent); margin-bottom: 12px;">🎉 以上です！</h2>
+      <p style="font-size: 14px; color: var(--text-sub); margin-bottom: 24px;">ありがとうございました！</p>
+      <button id="back-btn" class="btn" style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);">プロフィールに戻る</button>
+    </div>
+
+  </div>
+
+  <script>
+    const actionBtn = document.getElementById('action-btn');
+    const backBtn = document.getElementById('back-btn');
+    const profileScreen = document.getElementById('profile-screen');
+    const thanksScreen = document.getElementById('thanks-screen');
+
+    actionBtn.addEventListener('click', () => {
+      profileScreen.style.display = 'none';
+      thanksScreen.style.display = 'block';
+    });
+
+    backBtn.addEventListener('click', () => {
+      thanksScreen.style.display = 'none';
+      profileScreen.style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>
